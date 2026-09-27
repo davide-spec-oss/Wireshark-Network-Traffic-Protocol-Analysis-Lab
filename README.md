@@ -115,7 +115,7 @@ Durante il lab sono stati utilizzati i seguenti filtri per isolare il traffico r
 
 | Filtro Wireshark | Scopo / Descrizione |
 | :--- | :--- |
-| `http || dns` | Isola esclusivamente il traffico Web non cifrato e di risoluzione nomi . |
+| `http \|\| dns` | Isola esclusivamente il traffico Web non cifrato e di risoluzione nomi . |
 | `http.request.method == "POST"` | Filtra solo gli invii di dati con riechieste POST (es. login). |
 | `tcp.flags.syn == 1 and tcp.flags.ack == 0` | Identifica i tentativi di avvio connessione TCP (utile per rilevare SYN Flood(DoS)). |
 | `tcp.port == 8080` | Mostra l'intero traffico TCP che passa per la porta 8080(server locale). |
